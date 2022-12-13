@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33110.190
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HorseCareerMode", "HorseCareerMode\HorseCareerMode.csproj", "{1F152759-FB8E-4D94-AE0A-291A4DA1C0EE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1F152759-FB8E-4D94-AE0A-291A4DA1C0EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1F152759-FB8E-4D94-AE0A-291A4DA1C0EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1F152759-FB8E-4D94-AE0A-291A4DA1C0EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1F152759-FB8E-4D94-AE0A-291A4DA1C0EE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {AD0A399E-35DD-408D-A9FF-F9E7BA6B1428}
+	EndGlobalSection
+EndGlobal
