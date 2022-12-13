@@ -29,6 +29,14 @@ public enum Profissao
             this.profissao = profissao;
         }
 
+        public override string ToString()
+        {
+            return "O " + nome + " ,de "+idade+" anos, " +" é " + profissao;
+        }
+
+
+
+
         public string Nome { get => nome; set => nome = value; }
         public int Idade { get => idade; set => idade = value; }
         public Profissao Profissao { get => profissao; set => profissao = value; }

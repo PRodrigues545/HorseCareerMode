@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Pedro\\Desktop\\Programação\\HorseCareerMode\\HorseCareerMode\\HorseCareerMode.csproj",
+      "projectUniqueName": "C:\\Users\\Pedro\\Desktop\\Programação\\Trabalho POO\\HorseCareerMode\\HorseCareerMode\\HorseCareerMode.csproj",
       "projectName": "HorseCareerMode",
-      "projectPath": "C:\\Users\\Pedro\\Desktop\\Programação\\HorseCareerMode\\HorseCareerMode\\HorseCareerMode.csproj",
+      "projectPath": "C:\\Users\\Pedro\\Desktop\\Programação\\Trabalho POO\\HorseCareerMode\\HorseCareerMode\\HorseCareerMode.csproj",
       "packagesPath": "C:\\Users\\Pedro\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Pedro\\Desktop\\Programação\\HorseCareerMode\\HorseCareerMode\\obj\\",
+      "outputPath": "C:\\Users\\Pedro\\Desktop\\Programação\\Trabalho POO\\HorseCareerMode\\HorseCareerMode\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Pedro\\AppData\\Roaming\\NuGet\\NuGet.Config",

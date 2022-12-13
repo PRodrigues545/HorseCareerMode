@@ -11,7 +11,6 @@ namespace HorseCareerMode
     {
         public Galgo(string nome, int velocidade, int resistencia, int forca, string cor):base(nome, velocidade, resistencia, forca, cor)
         {
-
         }
 
         public override string ToString()
