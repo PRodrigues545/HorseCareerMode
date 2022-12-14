@@ -73,6 +73,8 @@
             int selectedIndex = 0;
             int selectedIndex1 = 0;
             int selectedIndex2 = 0;
+            int selectedIndex3 = 0;
+
             do
             {
                 string prompt = @"
@@ -154,6 +156,34 @@ Welcome to Horse Career Mode";
                                                 Console.Clear();
                                                 ce.InfoCentroDeEmprego();
                                                 Console.ReadKey(true);
+                                                break;
+                                            case 1:
+                                                do
+                                                {
+                                                    string prompt3 = @"
+           ,--,
+     _ ___/ /\|
+ ,;'( )__, )  ~
+//  //   '--; 
+'   \     | ^
+     ^    ^                                                     
+";
+                                                    string[] opcoes3 = { cav1.ToString(), cav2.ToString(), cav3.ToString() ,"Voltar"};
+
+                                                    Menu menuMercadoCavalos = new Menu(prompt3, opcoes3);
+
+                                                    selectedIndex3 = menuMercadoCavalos.Run();
+
+                                                    switch (selectedIndex3)
+                                                    {
+                                                        case 0:
+                                                            break;
+                                                        case 1:
+                                                            break;
+                                                        case 3:
+                                                            break;
+                                                    }
+                                                } while (selectedIndex3 != 3);
                                                 break;
 
                                         }
