@@ -8,8 +8,13 @@ namespace HorseCareerMode
 {
     public class Cavalo : Animal
     {
-        public Cavalo(string nome, int velocidade, int resistencia, int forca, string cor):base(nome, velocidade, resistencia, forca, cor)
+        private int popularidade;
+        private int preco;
+
+        public Cavalo(string nome, int velocidade, int resistencia, int forca, string cor, int popularidade):base(nome, velocidade, resistencia, forca, cor)
         {
+            this.popularidade = popularidade;
+            this.preco = 1000 + this.Velocidade * 5 + this.Resistencia * 3 + this.Forca * 2 + this.Popularidade * 3;
         }
 
 
@@ -17,8 +22,20 @@ namespace HorseCareerMode
         public void Treino()
         {
             this.Velocidade += 5;
+            if(this.Velocidade > 100)
+            {
+                this.Velocidade = 100;
+            }
             this.Resistencia += 2;
+            if (this.Resistencia > 100)
+            {
+                this.Resistencia = 100;
+            }
             this.Forca += 4;
+            if (this.Forca > 100)
+            {
+                this.Forca = 100;
+            }
             Console.WriteLine(@"
             .''
   ._.-.___.' (`\
@@ -34,6 +51,14 @@ namespace HorseCareerMode
             ToString();
         }
 
+        public void SessaoFotografica()
+        {
+            this.Popularidade += 7;
+            if (this.Popularidade > 100)
+            {
+                this.Popularidade= 100;
+            }
+        }
 
 
         public override string ToString()
@@ -41,5 +66,10 @@ namespace HorseCareerMode
             return "O cavalo " + Nome + " tem " + Velocidade + " de velocidade, " + Resistencia + " de resistência e " + Forca + " de força";
         }
 
+
+
+
+        public int Preco { get => preco; set => preco = value; }
+        public int Popularidade { get => popularidade; set => popularidade = value; }
     }
 }

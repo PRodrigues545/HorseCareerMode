@@ -15,6 +15,7 @@ namespace HorseCareerMode
         private int forca;
         private string cor;
 
+
         public Animal(string nome, int velocidade, int resistencia, int forca, string cor)
         {
             this.nome = nome;

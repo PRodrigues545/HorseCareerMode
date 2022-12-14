@@ -4,20 +4,72 @@
     {
         static void Main(string[] args)
         {
-            Funcionario fun1 = new Funcionario("Armingo", 45, Profissao.Treinador);
-            Cavalo cav1 = new Cavalo("Geremias", 50, 20, 50, "Castanho");
-            Cavalo cav2 = new Cavalo("Joao", 50, 20, 50, "Castanho");
-            Cavalo cav3 = new Cavalo("Pedro", 50, 20, 50, "Branco");
-            Cavalo cav4 = new Cavalo("Ze", 50, 20, 50, "Castanho");
+            Funcionario fun1 = new Funcionario("Armindo", 45, Profissao.Treinador, 150);
+            Funcionario fun2 = new Funcionario("David", 27, Profissao.Joquei, 200);
+            Funcionario fun3 = new Funcionario("João", 38, Profissao.Treinador, 150);
+            Funcionario fun4 = new Funcionario("Vitor", 25, Profissao.Joquei, 200);
+            Funcionario fun5 = new Funcionario("Rodrigo", 36, Profissao.Veterinario, 300);
+            Funcionario fun6 = new Funcionario("Beatriz", 32, Profissao.Veterinario, 300);
+            Funcionario fun7 = new Funcionario("Martim", 29, Profissao.Ferrador, 150);
+            Funcionario fun8 = new Funcionario("Afonso", 41, Profissao.Ferrador, 150);
+            Funcionario fun9 = new Funcionario("Sofia", 23, Profissao.MembroDoEstabulo, 50);
+            Funcionario fun10 = new Funcionario("Catarina", 25, Profissao.MembroDoEstabulo, 50);
+            Funcionario fun11 = new Funcionario("Armingo", 56, Profissao.TratadorDeCampo, 100);
+            Funcionario fun12 = new Funcionario("Matilde", 40, Profissao.TratadorDeCampo, 100);
+            Funcionario fun13 = new Funcionario("Miguel", 19, Profissao.RelacoesPublicas, 100);
+            Funcionario fun14 = new Funcionario("Leonor", 22, Profissao.RelacoesPublicas, 100);
+
+            Cavalo cav1 = new Cavalo("Ambicioso", 50, 40, 60, "Castanho", 30);
+            Cavalo cav2 = new Cavalo("Donatelo", 60, 30, 55, "Branco", 45);
+            Cavalo cav3 = new Cavalo("Impetuoso", 65, 30, 30, "Castanho", 55);
+            Cavalo cav4 = new Cavalo("Zorro", 55, 35, 35, "Preto", 40);
+            Cavalo cav5 = new Cavalo("Tormento", 45, 45, 60, "Preto", 60);
+            Cavalo cav6 = new Cavalo("Trono", 70, 20, 35, "Cinza", 70);
+            Cavalo cav7 = new Cavalo("Relâmpago", 55, 30, 60, "Branco", 55);
+            Cavalo cav8 = new Cavalo("Silvestre", 60, 50, 25, "Branco", 65);
+            Cavalo cav9 = new Cavalo("Victoriano", 66, 20, 63, "Cinza", 45);
+            Cavalo cav10 = new Cavalo("Pegaso", 44, 47, 63, "Cinza", 77);
+            Cavalo cav11 = new Cavalo("Rubi", 50, 50, 50, "Castanho", 50);
+            Cavalo cav12 = new Cavalo("Raio", 66, 20, 63, "Preto", 45);
+            Cavalo cav13 = new Cavalo("Sargento", 60, 40, 40, "Cinza", 45);
+            Cavalo cav14 = new Cavalo("Genovevo", 50, 35, 60, "Cinza", 54);
+            Cavalo cav15 = new Cavalo("Buenaventura", 55, 45, 65, "Castanho", 60);
+
+            Mercado mercado = new Mercado();
+
+            mercado.CavalosVenda.Add(cav1);
+            mercado.CavalosVenda.Add(cav2);
+            mercado.CavalosVenda.Add(cav3);
+            mercado.CavalosVenda.Add(cav4);
+            mercado.CavalosVenda.Add(cav5);
+            mercado.CavalosVenda.Add(cav6);
+            mercado.CavalosVenda.Add(cav7);
+            mercado.CavalosVenda.Add(cav8);
+            mercado.CavalosVenda.Add(cav9);
+            mercado.CavalosVenda.Add(cav10);
+            mercado.CavalosVenda.Add(cav11);
+            mercado.CavalosVenda.Add(cav12);
+            mercado.CavalosVenda.Add(cav13);
+            mercado.CavalosVenda.Add(cav14);
+
             Estabulo est1 = new Estabulo();
             CentroDeEmprego ce = new CentroDeEmprego();
-            est1.tropa.Add(cav1);
-            est1.tropa.Add(cav2);
-            est1.tropa.Add(cav3);
-            est1.tropa.Add(cav4);
+            //est1.tropa.Add(cav1);
+            //est1.tropa.Add(cav2);
+            //est1.tropa.Add(cav3);
+            //est1.tropa.Add(cav4);
             ce.Empregados.Add(fun1);
             //Jogo jogo = new Jogo();
             //jogo.Start();
+           
+            
+            
+            
+            
+            
+            
+            
+            
             int selectedIndex = 0;
             int selectedIndex1 = 0;
             int selectedIndex2 = 0;
@@ -68,7 +120,7 @@ Welcome to Horse Career Mode";
                                     break;
                                 case 1:
                                     Console.Clear();
-                                    cav1.Treino();
+                                    //cav1.Treino();
                                     Console.ReadKey(true);
 
                                     break;
