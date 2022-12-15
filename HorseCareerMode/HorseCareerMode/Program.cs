@@ -51,6 +51,7 @@
             mercado.CavalosVenda.Add(cav12);
             mercado.CavalosVenda.Add(cav13);
             mercado.CavalosVenda.Add(cav14);
+            mercado.CavalosVenda.Add(cav15);
 
             Estabulo est1 = new Estabulo();
             CentroDeEmprego ce = new CentroDeEmprego();
@@ -61,6 +62,8 @@
             ce.Empregados.Add(fun1);
             //Jogo jogo = new Jogo();
             //jogo.Start();
+
+            Perfil p1= new Perfil("Player", 5000);
            
             
             
@@ -106,7 +109,7 @@ Welcome to Horse Career Mode";
 /          \-----`    \  
 `.__________`-_______-'
 ";
-                            string[] opcoes1 = {"Cavalos", "Treinar", "Equipa", "Sessao Fotografica","Mercado", "Voltar" };
+                            string[] opcoes1 = {"Cavalos", "Treinar", "Equipa", "Sessao Fotografica","Mercado", "Banco", "Voltar" };
 
                             Menu menu = new Menu(prompt1, opcoes1);
 
@@ -168,22 +171,22 @@ Welcome to Horse Career Mode";
 '   \     | ^
      ^    ^                                                     
 ";
-                                                    string[] opcoes3 = { cav1.ToString(), cav2.ToString(), cav3.ToString() ,"Voltar"};
+
+                                                    int i = 0;
+                                                    string[] opcoes3 = new string[mercado.CavalosVenda.Count+1];
+                                                    foreach (Cavalo c in mercado.CavalosVenda)
+                                                    {
+                                                        opcoes3[i] = c.ToString();
+                                                        i++;
+                                                    }
+                                                    opcoes3.Append("Voltar");
 
                                                     Menu menuMercadoCavalos = new Menu(prompt3, opcoes3);
 
                                                     selectedIndex3 = menuMercadoCavalos.Run();
 
-                                                    switch (selectedIndex3)
-                                                    {
-                                                        case 0:
-                                                            break;
-                                                        case 1:
-                                                            break;
-                                                        case 3:
-                                                            break;
-                                                    }
-                                                } while (selectedIndex3 != 3);
+                                                    
+                                                } while (selectedIndex3 != mercado.CavalosVenda.Count);
                                                 break;
 
                                         }
@@ -193,8 +196,13 @@ Welcome to Horse Career Mode";
 
                                     }while (selectedIndex2 != 2);
                                     break;
+                                case 5:
+                                    Console.Clear();
+                                    Console.WriteLine(p1.ToString());
+                                    Console.ReadKey(true);
+                                    break;
                             }
-                        } while (selectedIndex1 != 5);
+                        } while (selectedIndex1 != 6);
                         break;
                     case 1:
                         Console.Clear();

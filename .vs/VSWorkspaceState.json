@@ -1,8 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\HorseCareerMode"
+    "\\HorseCareerMode",
+    "\\HorseCareerMode\\HorseCareerMode"
   ],
-  "SelectedNode": "\\HorseCareerMode\\HorseCareerMode.sln",
+  "SelectedNode": "\\HorseCareerMode\\HorseCareerMode\\Estabulo.cs",
   "PreviewInSolutionExplorer": false
 }

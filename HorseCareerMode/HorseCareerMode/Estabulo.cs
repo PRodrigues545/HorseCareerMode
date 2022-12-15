@@ -17,6 +17,13 @@ namespace HorseCareerMode
 
         public void InfoEstabulo()
         {
+            Console.WriteLine(@"
+           x
+.-. _______|
+|=|/     /  \
+| |_____|_""_|
+|_|_[X]_|____|
+");
             foreach (Cavalo cavalo in tropa)
             {
                 Console.WriteLine(cavalo);
