@@ -8,12 +8,13 @@ namespace HorseCareerMode
 {
     public class Estabulo
     {
-        public List<Cavalo> tropa;
+        private List<Cavalo> tropa;
 
         public Estabulo()
         {
-            this.tropa = new List<Cavalo>();
+            this.Tropa = new List<Cavalo>();
         }
+
 
         public void InfoEstabulo()
         {
@@ -24,10 +25,13 @@ namespace HorseCareerMode
 | |_____|_""_|
 |_|_[X]_|____|
 ");
-            foreach (Cavalo cavalo in tropa)
+            foreach (Cavalo cavalo in Tropa)
             {
                 Console.WriteLine(cavalo);
             }
         }
-    }
+        
+        
+        public List<Cavalo> Tropa { get => tropa; set => tropa = value; }
+    }     
 }

@@ -15,6 +15,24 @@ namespace HorseCareerMode
             this.team = new List<Funcionario>();
         }
 
-        public List<Funcionario> Team { get => team; set => team = value; }
+        public void InfoEquipa()
+        {
+            Console.WriteLine(@"
+           x
+.-. _______|
+|=|/     /  \
+| |_____|_""_|
+|_|_[X]_|____|
+");
+            foreach (Funcionario f in team)
+            {
+                Console.WriteLine(f);
+            }
+        }
+
+
+
+
+public List<Funcionario> Team { get => team; set => team = value; }
     }
 }

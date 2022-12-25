@@ -21,6 +21,7 @@ namespace HorseCareerMode
 
         public void Treino()
         {
+
             this.Velocidade += 5;
             if(this.Velocidade > 100)
             {

@@ -33,7 +33,7 @@ public enum Profissao
 
         public override string ToString()
         {
-            return "O " + nome + " ,de "+idade+" anos, " +" é " + profissao +"\nValor de mercado de " + this.preco + " euros";
+            return "O " + nome + " ,de "+idade+" anos, " +" é " + profissao +". Valor de mercado de " + this.preco + " euros";
         }
 
 
