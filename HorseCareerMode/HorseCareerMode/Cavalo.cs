@@ -45,11 +45,12 @@ namespace HorseCareerMode
 ' <' `\ ._/'\
    `   \     \
 ");
-            Console.WriteLine("O Cavalo aumentou 5 de velocidade");
-            Console.WriteLine("O Cavalo aumentou 2 de resistencia");
-            Console.WriteLine("O Cavalo aumentou 4 de força");
+            Console.WriteLine("O Cavalo "+ this.Nome +" aumentou 5 de velocidade");
+            Console.WriteLine("O Cavalo "+ this.Nome + " aumentou 2 de resistencia");
+            Console.WriteLine("O Cavalo "+ this.Nome + " aumentou 4 de força");
             Console.WriteLine();
-            ToString();
+            Console.WriteLine();
+            Console.WriteLine(ToString());
         }
 
         public void SessaoFotografica()
@@ -59,12 +60,22 @@ namespace HorseCareerMode
             {
                 this.Popularidade= 100;
             }
+            Console.WriteLine(@"
+         ___
+       [|   |=|{)__
+        |___| \/   )
+         /|\      /|
+        / | \     | \
+");
+            Console.WriteLine("O Cavalo " + this.Nome + " aumentou 7 de popularidade");
+            Console.WriteLine();
+            Console.WriteLine("O Cavalo " + this.Nome + " tem " + this.Popularidade + " de popularidade");
         }
 
 
         public override string ToString()
         {
-            return "O cavalo " + Nome + " tem " + Velocidade + " de velocidade, " + Resistencia + " de resistência e " + Forca + " de força";
+            return "O cavalo " + this.Nome + " tem " + this.Velocidade + " de velocidade, " + this.Resistencia + " de resistência e " + this.Forca + " de força";
         }
 
 

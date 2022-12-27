@@ -101,6 +101,10 @@ namespace HorseCareerMode
             int selectedIndex3 = 0;
             int selectedIndex4 = 0;
             int selectedIndex5 = 0;
+            int selectedIndex6 = 0;
+            int selectedIndex7 = 0;
+            int selectedIndex8 = 0;
+
 
             do
             {
@@ -133,7 +137,7 @@ Welcome to Horse Career Mode";
 /          \-----`    \  
 `.__________`-_______-'
 ";
-                            string[] opcoes1 = {"Cavalos", "Treinar", "Equipa", "Sessao Fotografica","Mercado", "Banco", "Voltar" };
+                            string[] opcoes1 = {"Cavalos", "Atividades", "Equipa", "Mercado", "Banco", "Voltar" };
 
                             Menu menu = new Menu(prompt1, opcoes1);
 
@@ -148,9 +152,560 @@ Welcome to Horse Career Mode";
 
                                     break;
                                 case 1:
-                                    Console.Clear();
-                                    //cav1.Treino();
-                                    Console.ReadKey(true);
+                                    do {
+                                    string prompt6 = @"
+
+        _______ _______      _______ _____          _____  ______  _____ 
+     /\|__   __|_   _\ \    / /_   _|  __ \   /\   |  __ \|  ____|/ ____|
+    /  \  | |    | |  \ \  / /  | | | |  | | /  \  | |  | | |__  | (___  
+   / /\ \ | |    | |   \ \/ /   | | | |  | |/ /\ \ | |  | |  __|  \___ \ 
+  / ____ \| |   _| |_   \  /   _| |_| |__| / ____ \| |__| | |____ ____) |
+ /_/    \_\_|  |_____|   \/   |_____|_____/_/    \_\_____/|______|_____/                                                                         
+                                                                                                                          
+";
+                                    string[] opcoes6 = { "Treinar", "Sessão Fotografica", "Voltar"};
+
+                                    Menu menuAtividades = new Menu(prompt6, opcoes6);
+
+                                    selectedIndex6 = menuAtividades.Run();
+
+                                        switch (selectedIndex6)
+                                        {
+                                            case 0:
+                                                Console.Clear();
+                                                string prompt7 = @"
+           ,--,
+     _ ___/ /\|
+ ,;'( )__, )  ~
+//  //   '--; 
+'   \     | ^
+     ^    ^                                                     
+";
+
+                                                int i3 = 0;
+                                                string[] opcoes7 = new string[est1.Tropa.Count + 1];
+                                                foreach (Cavalo c in est1.Tropa)
+                                                {
+                                                    opcoes7[i3] = c.ToString();
+                                                    i3++;
+                                                }
+                                                opcoes7[i3] = "Voltar";
+
+                                                Menu menuTreinoCavalos = new Menu(prompt7, opcoes7);
+                                                selectedIndex7 = menuTreinoCavalos.Run();
+
+                                                int da = Array.IndexOf(opcoes7, cav1.ToString());
+                                                int db = Array.IndexOf(opcoes7, cav2.ToString());
+                                                int dc = Array.IndexOf(opcoes7, cav3.ToString());
+                                                int dd = Array.IndexOf(opcoes7, cav4.ToString());
+                                                int de = Array.IndexOf(opcoes7, cav5.ToString());
+                                                int df = Array.IndexOf(opcoes7, cav6.ToString());
+                                                int dg = Array.IndexOf(opcoes7, cav7.ToString());
+                                                int dh = Array.IndexOf(opcoes7, cav8.ToString());
+                                                int di = Array.IndexOf(opcoes7, cav9.ToString());
+                                                int dj = Array.IndexOf(opcoes7, cav10.ToString());
+                                                int dk = Array.IndexOf(opcoes7, cav11.ToString());
+                                                int dl = Array.IndexOf(opcoes7, cav12.ToString());
+                                                int dm = Array.IndexOf(opcoes7, cav13.ToString());
+                                                int dn = Array.IndexOf(opcoes7, cav14.ToString());
+                                                int dp = Array.IndexOf(opcoes7, cav15.ToString());
+
+                                                if (selectedIndex7 == da)
+                                                {
+                                                    if (equipa1.Team.Contains(fun1) || equipa1.Team.Contains(fun3))
+                                                    {
+                                                        Console.Clear();
+                                                        cav1.Treino();
+                                                        Console.ReadKey(true);
+                                                    }
+                                                    else
+                                                    {
+                                                        Console.Clear();
+                                                        Console.WriteLine("Impossivel treinar! Compre um treinador!");
+                                                        Console.ReadKey(true);
+                                                    }
+                                                }
+                                                if (selectedIndex7 == db)
+                                                {
+                                                    if (equipa1.Team.Contains(fun1) || equipa1.Team.Contains(fun3))
+                                                    {
+                                                        Console.Clear();
+                                                        cav2.Treino();
+                                                        Console.ReadKey(true);
+                                                    }
+                                                    else
+                                                    {
+                                                        Console.Clear();
+                                                        Console.WriteLine("Impossivel treinar! Compre um treinador!");
+                                                        Console.ReadKey(true);
+                                                    }
+                                                }
+                                                if (selectedIndex7 == dc)
+                                                {
+                                                    if (equipa1.Team.Contains(fun1) || equipa1.Team.Contains(fun3))
+                                                    {
+                                                        Console.Clear();
+                                                        cav3.Treino();
+                                                        Console.ReadKey(true);
+                                                    }
+                                                    else
+                                                    {
+                                                        Console.Clear();
+                                                        Console.WriteLine("Impossivel treinar! Compre um treinador!");
+                                                        Console.ReadKey(true);
+                                                    }
+                                                }
+                                                if (selectedIndex7 == dd)
+                                                {
+                                                    if (equipa1.Team.Contains(fun1) || equipa1.Team.Contains(fun3))
+                                                    {
+                                                        Console.Clear();
+                                                        cav4.Treino();
+                                                        Console.ReadKey(true);
+                                                    }
+                                                    else
+                                                    {
+                                                        Console.Clear();
+                                                        Console.WriteLine("Impossivel treinar! Compre um treinador!");
+                                                        Console.ReadKey(true);
+                                                    }
+                                                }
+                                                if (selectedIndex7 == de)
+                                                {
+                                                    if (equipa1.Team.Contains(fun1) || equipa1.Team.Contains(fun3))
+                                                    {
+                                                        Console.Clear();
+                                                        cav5.Treino();
+                                                        Console.ReadKey(true);
+                                                    }
+                                                    else
+                                                    {
+                                                        Console.Clear();
+                                                        Console.WriteLine("Impossivel treinar! Compre um treinador!");
+                                                        Console.ReadKey(true);
+                                                    }
+                                                }
+                                                if (selectedIndex7 == df)
+                                                {
+                                                    if (equipa1.Team.Contains(fun1) || equipa1.Team.Contains(fun3))
+                                                    {
+                                                        Console.Clear();
+                                                        cav6.Treino();
+                                                        Console.ReadKey(true);
+                                                    }
+                                                    else
+                                                    {
+                                                        Console.Clear();
+                                                        Console.WriteLine("Impossivel treinar! Compre um treinador!");
+                                                        Console.ReadKey(true);
+                                                    }
+                                                }
+                                                if (selectedIndex7 == dg)
+                                                {
+                                                    if (equipa1.Team.Contains(fun1) || equipa1.Team.Contains(fun3))
+                                                    {
+                                                        Console.Clear();
+                                                        cav7.Treino();
+                                                        Console.ReadKey(true);
+                                                    }
+                                                    else
+                                                    {
+                                                        Console.Clear();
+                                                        Console.WriteLine("Impossivel treinar! Compre um treinador!");
+                                                        Console.ReadKey(true);
+                                                    }
+                                                }
+                                                if (selectedIndex7 == dh)
+                                                {
+                                                    if (equipa1.Team.Contains(fun1) || equipa1.Team.Contains(fun3))
+                                                    {
+                                                        Console.Clear();
+                                                        cav8.Treino();
+                                                        Console.ReadKey(true);
+                                                    }
+                                                    else
+                                                    {
+                                                        Console.Clear();
+                                                        Console.WriteLine("Impossivel treinar! Compre um treinador!");
+                                                        Console.ReadKey(true);
+                                                    }
+                                                }
+                                                if (selectedIndex7 == di)
+                                                {
+                                                    if (equipa1.Team.Contains(fun1) || equipa1.Team.Contains(fun3))
+                                                    {
+                                                        Console.Clear();
+                                                        cav9.Treino();
+                                                        Console.ReadKey(true);
+                                                    }
+                                                    else
+                                                    {
+                                                        Console.Clear();
+                                                        Console.WriteLine("Impossivel treinar! Compre um treinador!");
+                                                        Console.ReadKey(true);
+                                                    }
+                                                }
+                                                if (selectedIndex7 == dj)
+                                                {
+                                                    if (equipa1.Team.Contains(fun1) || equipa1.Team.Contains(fun3))
+                                                    {
+                                                        Console.Clear();
+                                                        cav10.Treino();
+                                                        Console.ReadKey(true);
+                                                    }
+                                                    else
+                                                    {
+                                                        Console.Clear();
+                                                        Console.WriteLine("Impossivel treinar! Compre um treinador!");
+                                                        Console.ReadKey(true);
+                                                    }
+                                                }
+                                                if (selectedIndex7 == dk)
+                                                {
+                                                    if (equipa1.Team.Contains(fun1) || equipa1.Team.Contains(fun3))
+                                                    {
+                                                        Console.Clear();
+                                                        cav11.Treino();
+                                                        Console.ReadKey(true);
+                                                    }
+                                                    else
+                                                    {
+                                                        Console.Clear();
+                                                        Console.WriteLine("Impossivel treinar! Compre um treinador!");
+                                                        Console.ReadKey(true);
+                                                    }
+                                                }
+                                                if (selectedIndex7 == dl)
+                                                {
+                                                    if (equipa1.Team.Contains(fun1) || equipa1.Team.Contains(fun3))
+                                                    {
+                                                        Console.Clear();
+                                                        cav12.Treino();
+                                                        Console.ReadKey(true);
+                                                    }
+                                                    else
+                                                    {
+                                                        Console.Clear();
+                                                        Console.WriteLine("Impossivel treinar! Compre um treinador!");
+                                                        Console.ReadKey(true);
+                                                    }
+                                                }
+                                                if (selectedIndex7 == dm)
+                                                {
+                                                    if (equipa1.Team.Contains(fun1) || equipa1.Team.Contains(fun3))
+                                                    {
+                                                        Console.Clear();
+                                                        cav13.Treino();
+                                                        Console.ReadKey(true);
+                                                    }
+                                                    else
+                                                    {
+                                                        Console.Clear();
+                                                        Console.WriteLine("Impossivel treinar! Compre um treinador!");
+                                                        Console.ReadKey(true);
+                                                    }
+                                                }
+                                                if (selectedIndex7 == dn)
+                                                {
+                                                    if (equipa1.Team.Contains(fun1) || equipa1.Team.Contains(fun3))
+                                                    {
+                                                        Console.Clear();
+                                                        cav14.Treino();
+                                                        Console.ReadKey(true);
+                                                    }
+                                                    else
+                                                    {
+                                                        Console.Clear();
+                                                        Console.WriteLine("Impossivel treinar! Compre um treinador!");
+                                                        Console.ReadKey(true);
+                                                    }
+                                                }
+                                                if (selectedIndex7 == dp)
+                                                {
+                                                    if (equipa1.Team.Contains(fun1) || equipa1.Team.Contains(fun3))
+                                                    {
+                                                        Console.Clear();
+                                                        cav15.Treino();
+                                                        Console.ReadKey(true);
+                                                    }
+                                                    else
+                                                    {
+                                                        Console.Clear();
+                                                        Console.WriteLine("Impossivel treinar! Compre um treinador!");
+                                                        Console.ReadKey(true);
+                                                    }
+                                                }
+
+                                                break;
+                                            case 1:
+                                                Console.Clear();
+                                                string prompt8 = @"
+           ,--,
+     _ ___/ /\|
+ ,;'( )__, )  ~
+//  //   '--; 
+'   \     | ^
+     ^    ^                                                     
+";
+
+                                                int i4 = 0;
+                                                string[] opcoes8 = new string[est1.Tropa.Count + 1];
+                                                foreach (Cavalo c in est1.Tropa)
+                                                {
+                                                    opcoes8[i4] = c.ToString();
+                                                    i4++;
+                                                }
+                                                opcoes8[i4] = "Voltar";
+
+                                                Menu menuFotoCavalos = new Menu(prompt8, opcoes8);
+                                                selectedIndex8 = menuFotoCavalos.Run();
+
+                                                int ea = Array.IndexOf(opcoes8, cav1.ToString());
+                                                int eb = Array.IndexOf(opcoes8, cav2.ToString());
+                                                int ec = Array.IndexOf(opcoes8, cav3.ToString());
+                                                int ed = Array.IndexOf(opcoes8, cav4.ToString());
+                                                int ee = Array.IndexOf(opcoes8, cav5.ToString());
+                                                int ef = Array.IndexOf(opcoes8, cav6.ToString());
+                                                int eg = Array.IndexOf(opcoes8, cav7.ToString());
+                                                int eh = Array.IndexOf(opcoes8, cav8.ToString());
+                                                int ei = Array.IndexOf(opcoes8, cav9.ToString());
+                                                int ej = Array.IndexOf(opcoes8, cav10.ToString());
+                                                int ek = Array.IndexOf(opcoes8, cav11.ToString());
+                                                int el = Array.IndexOf(opcoes8, cav12.ToString());
+                                                int em = Array.IndexOf(opcoes8, cav13.ToString());
+                                                int en = Array.IndexOf(opcoes8, cav14.ToString());
+                                                int eo = Array.IndexOf(opcoes8, cav15.ToString());
+
+                                                if (selectedIndex8 == ea)
+                                                {
+                                                    if (equipa1.Team.Contains(fun13) || equipa1.Team.Contains(fun14))
+                                                    {
+                                                        Console.Clear();
+                                                        cav1.SessaoFotografica();
+                                                        Console.ReadKey(true);
+                                                    }
+                                                    else
+                                                    {
+                                                        Console.Clear();
+                                                        Console.WriteLine("Impossivel fazer a sessão! Contrate um RP!");
+                                                        Console.ReadKey(true);
+                                                    }
+                                                }
+                                                if (selectedIndex8 == eb)
+                                                {
+                                                    if (equipa1.Team.Contains(fun13) || equipa1.Team.Contains(fun14))
+                                                    {
+                                                        Console.Clear();
+                                                        cav2.SessaoFotografica();
+                                                        Console.ReadKey(true);
+                                                    }
+                                                    else
+                                                    {
+                                                        Console.Clear();
+                                                        Console.WriteLine("Impossivel fazer a sessão! Contrate um RP!");
+                                                        Console.ReadKey(true);
+                                                    }
+                                                }
+                                                if (selectedIndex8 == ec)
+                                                {
+                                                    if (equipa1.Team.Contains(fun13) || equipa1.Team.Contains(fun14))
+                                                    {
+                                                        Console.Clear();
+                                                        cav3.SessaoFotografica();
+                                                        Console.ReadKey(true);
+                                                    }
+                                                    else
+                                                    {
+                                                        Console.Clear();
+                                                        Console.WriteLine("Impossivel fazer a sessão! Contrate um RP!");
+                                                        Console.ReadKey(true);
+                                                    }
+                                                }
+                                                if (selectedIndex8 == ed)
+                                                {
+                                                    if (equipa1.Team.Contains(fun13) || equipa1.Team.Contains(fun14))
+                                                    {
+                                                        Console.Clear();
+                                                        cav4.SessaoFotografica();
+                                                        Console.ReadKey(true);
+                                                    }
+                                                    else
+                                                    {
+                                                        Console.Clear();
+                                                        Console.WriteLine("Impossivel fazer a sessão! Contrate um RP!");
+                                                        Console.ReadKey(true);
+                                                    }
+                                                }
+                                                if (selectedIndex8 == ee)
+                                                {
+                                                    if (equipa1.Team.Contains(fun13) || equipa1.Team.Contains(fun14))
+                                                    {
+                                                        Console.Clear();
+                                                        cav5.SessaoFotografica();
+                                                        Console.ReadKey(true);
+                                                    }
+                                                    else
+                                                    {
+                                                        Console.Clear();
+                                                        Console.WriteLine("Impossivel fazer a sessão! Contrate um RP!");
+                                                        Console.ReadKey(true);
+                                                    }
+                                                }
+                                                if (selectedIndex8 == ef)
+                                                {
+                                                    if (equipa1.Team.Contains(fun13) || equipa1.Team.Contains(fun14))
+                                                    {
+                                                        Console.Clear();
+                                                        cav6.SessaoFotografica();
+                                                        Console.ReadKey(true);
+                                                    }
+                                                    else
+                                                    {
+                                                        Console.Clear();
+                                                        Console.WriteLine("Impossivel fazer a sessão! Contrate um RP!");
+                                                        Console.ReadKey(true);
+                                                    }
+                                                }
+                                                if (selectedIndex8 == eg)
+                                                {
+                                                    if (equipa1.Team.Contains(fun13) || equipa1.Team.Contains(fun14))
+                                                    {
+                                                        Console.Clear();
+                                                        cav7.SessaoFotografica();
+                                                        Console.ReadKey(true);
+                                                    }
+                                                    else
+                                                    {
+                                                        Console.Clear();
+                                                        Console.WriteLine("Impossivel fazer a sessão! Contrate um RP!");
+                                                        Console.ReadKey(true);
+                                                    }
+                                                }
+                                                if (selectedIndex8 == eh)
+                                                {
+                                                    if (equipa1.Team.Contains(fun13) || equipa1.Team.Contains(fun14))
+                                                    {
+                                                        Console.Clear();
+                                                        cav8.SessaoFotografica();
+                                                        Console.ReadKey(true);
+                                                    }
+                                                    else
+                                                    {
+                                                        Console.Clear();
+                                                        Console.WriteLine("Impossivel fazer a sessão! Contrate um RP!");
+                                                        Console.ReadKey(true);
+                                                    }
+                                                }
+                                                if (selectedIndex8 == ei)
+                                                {
+                                                    if (equipa1.Team.Contains(fun13) || equipa1.Team.Contains(fun14))
+                                                    {
+                                                        Console.Clear();
+                                                        cav9.SessaoFotografica();
+                                                        Console.ReadKey(true);
+                                                    }
+                                                    else
+                                                    {
+                                                        Console.Clear();
+                                                        Console.WriteLine("Impossivel fazer a sessão! Contrate um RP!");
+                                                        Console.ReadKey(true);
+                                                    }
+                                                }
+                                                if (selectedIndex8 == ej)
+                                                {
+                                                    if (equipa1.Team.Contains(fun13) || equipa1.Team.Contains(fun14))
+                                                    {
+                                                        Console.Clear();
+                                                        cav10.SessaoFotografica();
+                                                        Console.ReadKey(true);
+                                                    }
+                                                    else
+                                                    {
+                                                        Console.Clear();
+                                                        Console.WriteLine("Impossivel fazer a sessão! Contrate um RP!");
+                                                        Console.ReadKey(true);
+                                                    }
+                                                }
+                                                if (selectedIndex8 == ek)
+                                                {
+                                                    if (equipa1.Team.Contains(fun13) || equipa1.Team.Contains(fun14))
+                                                    {
+                                                        Console.Clear();
+                                                        cav11.SessaoFotografica();
+                                                        Console.ReadKey(true);
+                                                    }
+                                                    else
+                                                    {
+                                                        Console.Clear();
+                                                        Console.WriteLine("Impossivel fazer a sessão! Contrate um RP!");
+                                                        Console.ReadKey(true);
+                                                    }
+                                                }
+                                                if (selectedIndex8 == el)
+                                                {
+                                                    if (equipa1.Team.Contains(fun13) || equipa1.Team.Contains(fun14))
+                                                    {
+                                                        Console.Clear();
+                                                        cav12.SessaoFotografica();
+                                                        Console.ReadKey(true);
+                                                    }
+                                                    else
+                                                    {
+                                                        Console.Clear();
+                                                        Console.WriteLine("Impossivel fazer a sessão! Contrate um RP!");
+                                                        Console.ReadKey(true);
+                                                    }
+                                                }
+                                                if (selectedIndex8 == em)
+                                                {
+                                                    if (equipa1.Team.Contains(fun13) || equipa1.Team.Contains(fun14))
+                                                    {
+                                                        Console.Clear();
+                                                        cav13.SessaoFotografica();
+                                                        Console.ReadKey(true);
+                                                    }
+                                                    else
+                                                    {
+                                                        Console.Clear();
+                                                        Console.WriteLine("Impossivel fazer a sessão! Contrate um RP!");
+                                                        Console.ReadKey(true);
+                                                    }
+                                                }
+                                                if (selectedIndex8 == en)
+                                                {
+                                                    if (equipa1.Team.Contains(fun13) || equipa1.Team.Contains(fun14))
+                                                    {
+                                                        Console.Clear();
+                                                        cav14.SessaoFotografica();
+                                                        Console.ReadKey(true);
+                                                    }
+                                                    else
+                                                    {
+                                                        Console.Clear();
+                                                        Console.WriteLine("Impossivel fazer a sessão! Contrate um RP!");
+                                                        Console.ReadKey(true);
+                                                    }
+                                                }
+                                                if (selectedIndex8 == eo)
+                                                {
+                                                    if (equipa1.Team.Contains(fun13) || equipa1.Team.Contains(fun14))
+                                                    {
+                                                        Console.Clear();
+                                                        cav15.SessaoFotografica();
+                                                        Console.ReadKey(true);
+                                                    }
+                                                    else
+                                                    {
+                                                        Console.Clear();
+                                                        Console.WriteLine("Impossivel fazer a sessão! Contrate um RP!");
+                                                        Console.ReadKey(true);
+                                                    }
+                                                }
+                                                break;
+                                        }
+                                    } while (selectedIndex6 != 2);
+
+
 
                                     break;
                                 case 2:
@@ -159,8 +714,6 @@ Welcome to Horse Career Mode";
                                     Console.ReadKey(true);
                                     break;
                                 case 3:
-                                    break;
-                                case 4:
                                     do
                                     {
                                         string prompt2 = @"
@@ -839,13 +1392,13 @@ Welcome to Horse Career Mode";
                                         }
                                     }while (selectedIndex2 != 3);
                                     break;
-                                case 5:
+                                case 4:
                                     Console.Clear();
                                     Console.WriteLine(p1.ToString());
                                     Console.ReadKey(true);
                                     break;
                             }
-                        } while (selectedIndex1 != 6);
+                        } while (selectedIndex1 != 5);
                         break;
                     case 1:
                         Console.Clear();
