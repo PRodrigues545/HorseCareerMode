@@ -151,10 +151,12 @@ Welcome to Horse Career Mode";
 
                                     selectedIndex6 = menuAtividades.Run();
 
+                                        int dia = 0;
                                         switch (selectedIndex6)
                                         {
                                             case 0:
                                                 Console.Clear();
+                                                dia++;
                                                 string prompt7 = @"
            ,--,
      _ ___/ /\|
@@ -685,6 +687,7 @@ Welcome to Horse Career Mode";
                                                 }
                                                 break;
                                             case 2:
+                                                Console.WriteLine(dia);
                                                 break;
                                             case 3:
                                                 break;
@@ -1275,21 +1278,21 @@ Escola o cavalo para competir!
 
                                                     selectedIndex3 = menuMercadoCavalos.Run();
 
-                                                    int aa = Array.IndexOf(opcoes3, cav1.ToString());
-                                                    int ab = Array.IndexOf(opcoes3, cav2.ToString());
-                                                    int ac = Array.IndexOf(opcoes3, cav3.ToString());
-                                                    int ad = Array.IndexOf(opcoes3, cav4.ToString());
-                                                    int ae = Array.IndexOf(opcoes3, cav5.ToString());
-                                                    int af = Array.IndexOf(opcoes3, cav6.ToString());
-                                                    int ag = Array.IndexOf(opcoes3, cav7.ToString());
-                                                    int ah = Array.IndexOf(opcoes3, cav8.ToString());
-                                                    int ai = Array.IndexOf(opcoes3, cav9.ToString());
-                                                    int aj = Array.IndexOf(opcoes3, cav10.ToString());
-                                                    int ak = Array.IndexOf(opcoes3, cav11.ToString());
-                                                    int al = Array.IndexOf(opcoes3, cav12.ToString());
-                                                    int am = Array.IndexOf(opcoes3, cav13.ToString());
-                                                    int an = Array.IndexOf(opcoes3, cav14.ToString());
-                                                    int ao = Array.IndexOf(opcoes3, cav15.ToString());
+                                                    int aa = Array.IndexOf(opcoes3, cav1.Nome + ", tem " + cav1.Popularidade + " de popularidade" + " e custa " + cav1.Preco);
+                                                    int ab = Array.IndexOf(opcoes3, cav2.Nome + ", tem " + cav2.Popularidade + " de popularidade" + " e custa " + cav2.Preco);
+                                                    int ac = Array.IndexOf(opcoes3, cav3.Nome + ", tem " + cav3.Popularidade + " de popularidade" + " e custa " + cav3.Preco);
+                                                    int ad = Array.IndexOf(opcoes3, cav4.Nome + ", tem " + cav4.Popularidade + " de popularidade" + " e custa " + cav4.Preco);
+                                                    int ae = Array.IndexOf(opcoes3, cav5.Nome + ", tem " + cav5.Popularidade + " de popularidade" + " e custa " + cav5.Preco);
+                                                    int af = Array.IndexOf(opcoes3, cav6.Nome + ", tem " + cav6.Popularidade + " de popularidade" + " e custa " + cav6.Preco);
+                                                    int ag = Array.IndexOf(opcoes3, cav7.Nome + ", tem " + cav7.Popularidade + " de popularidade" + " e custa " + cav7.Preco);
+                                                    int ah = Array.IndexOf(opcoes3, cav8.Nome + ", tem " + cav8.Popularidade + " de popularidade" + " e custa " + cav8.Preco);
+                                                    int ai = Array.IndexOf(opcoes3, cav9.Nome + ", tem " + cav9.Popularidade + " de popularidade" + " e custa " + cav9.Preco);
+                                                    int aj = Array.IndexOf(opcoes3, cav10.Nome + ", tem " + cav10.Popularidade + " de popularidade" + " e custa " + cav10.Preco);
+                                                    int ak = Array.IndexOf(opcoes3, cav11.Nome + ", tem " + cav11.Popularidade + " de popularidade" + " e custa " + cav11.Preco);
+                                                    int al = Array.IndexOf(opcoes3, cav12.Nome + ", tem " + cav12.Popularidade + " de popularidade" + " e custa " + cav12.Preco);
+                                                    int am = Array.IndexOf(opcoes3, cav13.Nome + ", tem " + cav13.Popularidade + " de popularidade" + " e custa " + cav13.Preco);
+                                                    int an = Array.IndexOf(opcoes3, cav14.Nome + ", tem " + cav14.Popularidade + " de popularidade" + " e custa " + cav14.Preco);
+                                                    int ao = Array.IndexOf(opcoes3, cav15.Nome + ", tem " + cav15.Popularidade + " de popularidade" + " e custa " + cav15.Preco);
 
                                                     if (selectedIndex3 == aa)
                                                     {

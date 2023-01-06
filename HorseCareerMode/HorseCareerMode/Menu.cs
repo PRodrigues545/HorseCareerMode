@@ -33,7 +33,7 @@ namespace HorseCareerMode
                 {
                     prefixo = "*";
                     Console.ForegroundColor = ConsoleColor.Black;
-                    Console.BackgroundColor = ConsoleColor.White;
+                    Console.BackgroundColor = ConsoleColor.Blue;
 
                 }
                 else
@@ -59,7 +59,7 @@ namespace HorseCareerMode
                 ConsoleKeyInfo keyInfo = ReadKey(true);
                 keyPressed = keyInfo.Key;
 
-                //Update selected index based on arrow keys
+
                 if (keyPressed == ConsoleKey.UpArrow)
                 {
                     SelectedIndex--;
