@@ -42,6 +42,7 @@ namespace HorseCareerMode
             Estabulo est1 = new Estabulo();
             CentroDeEmprego cde = new CentroDeEmprego();
             Equipa equipa1 = new Equipa();
+            Calendario calendario = new Calendario();
 
             mercado.CavalosVenda.Add(cav1);
             mercado.CavalosVenda.Add(cav2);
@@ -145,18 +146,16 @@ Welcome to Horse Career Mode";
  /_/    \_\_|  |_____|   \/   |_____|_____/_/    \_\_____/|______|_____/                                                                         
                                                                                                                           
 ";
-                                    string[] opcoes6 = { "Treinar", "Sessão Fotografica", "Limpeza", "Visitas","Corrida","Voltar"};
+                                    string[] opcoes6 = { "Treinar", "Sessão Fotografica","Calendario" ,"Limpeza", "Visitas","Corrida","Voltar"};
 
                                     Menu menuAtividades = new Menu(prompt6, opcoes6);
 
                                     selectedIndex6 = menuAtividades.Run();
-
-                                        int dia = 0;
+           
                                         switch (selectedIndex6)
                                         {
                                             case 0:
                                                 Console.Clear();
-                                                dia++;
                                                 string prompt7 = @"
            ,--,
      _ ___/ /\|
@@ -196,10 +195,12 @@ Welcome to Horse Career Mode";
 
                                                 if (selectedIndex7 == da)
                                                 {
+                                                    calendario.AvançarDia();
                                                     if (equipa1.Team.Contains(fun1) || equipa1.Team.Contains(fun3))
                                                     {
                                                         Console.Clear();
                                                         cav1.Treino();
+                                                        
                                                         Console.ReadKey(true);
                                                     }
                                                     else
@@ -687,12 +688,21 @@ Welcome to Horse Career Mode";
                                                 }
                                                 break;
                                             case 2:
-                                                Console.WriteLine(dia);
+                                                Console.Clear();
+                                                calendario.MostrarDia();
+                                                Console.ReadKey(true);
                                                 break;
-                                            case 3:
+                                            case3:
                                                 break;
                                             case 4:
-                                                string prompt9 = @"
+                                                Console.Clear();
+                                                calendario.AvançarDia();
+                                                Console.ReadKey(true);
+                                                break;
+                                            case 5:
+                                                if (calendario.Dia == 7)
+                                                {
+                                                    string prompt9 = @"
  -------------------+--+--+--+--+--
                     |  |##|  |##|
                     |  |##|  |##|
@@ -710,262 +720,269 @@ Welcome to Horse Career Mode";
 Escola o cavalo para competir!
 ";
 
-                                                int i5 = 0;
-                                                string[] opcoes9 = new string[est1.Tropa.Count + 1];
-                                                foreach (Cavalo c in est1.Tropa)
-                                                {
-                                                    opcoes9[i5] = c.ToString();
-                                                    i5++;
-                                                }
-                                                opcoes9[i5] = "Voltar";
+                                                    int i5 = 0;
+                                                    string[] opcoes9 = new string[est1.Tropa.Count + 1];
+                                                    foreach (Cavalo c in est1.Tropa)
+                                                    {
+                                                        opcoes9[i5] = c.ToString();
+                                                        i5++;
+                                                    }
+                                                    opcoes9[i5] = "Voltar";
 
-                                                Menu menuCorrida = new Menu(prompt9, opcoes9);
-                                                selectedIndex9 = menuCorrida.Run();
+                                                    Menu menuCorrida = new Menu(prompt9, opcoes9);
+                                                    selectedIndex9 = menuCorrida.Run();
 
-                                                int fa = Array.IndexOf(opcoes9, cav1.ToString());
-                                                int fb = Array.IndexOf(opcoes9, cav2.ToString());
-                                                int fc = Array.IndexOf(opcoes9, cav3.ToString());
-                                                int fd = Array.IndexOf(opcoes9, cav4.ToString());
-                                                int fe = Array.IndexOf(opcoes9, cav5.ToString());
-                                                int ff = Array.IndexOf(opcoes9, cav6.ToString());
-                                                int fg = Array.IndexOf(opcoes9, cav7.ToString());
-                                                int fh = Array.IndexOf(opcoes9, cav8.ToString());
-                                                int fi = Array.IndexOf(opcoes9, cav9.ToString());
-                                                int fj = Array.IndexOf(opcoes9, cav10.ToString());
-                                                int fk = Array.IndexOf(opcoes9, cav11.ToString());
-                                                int fl = Array.IndexOf(opcoes9, cav12.ToString());
-                                                int fm = Array.IndexOf(opcoes9, cav13.ToString());
-                                                int fn = Array.IndexOf(opcoes9, cav14.ToString());
-                                                int fo = Array.IndexOf(opcoes9, cav15.ToString());
+                                                    int fa = Array.IndexOf(opcoes9, cav1.ToString());
+                                                    int fb = Array.IndexOf(opcoes9, cav2.ToString());
+                                                    int fc = Array.IndexOf(opcoes9, cav3.ToString());
+                                                    int fd = Array.IndexOf(opcoes9, cav4.ToString());
+                                                    int fe = Array.IndexOf(opcoes9, cav5.ToString());
+                                                    int ff = Array.IndexOf(opcoes9, cav6.ToString());
+                                                    int fg = Array.IndexOf(opcoes9, cav7.ToString());
+                                                    int fh = Array.IndexOf(opcoes9, cav8.ToString());
+                                                    int fi = Array.IndexOf(opcoes9, cav9.ToString());
+                                                    int fj = Array.IndexOf(opcoes9, cav10.ToString());
+                                                    int fk = Array.IndexOf(opcoes9, cav11.ToString());
+                                                    int fl = Array.IndexOf(opcoes9, cav12.ToString());
+                                                    int fm = Array.IndexOf(opcoes9, cav13.ToString());
+                                                    int fn = Array.IndexOf(opcoes9, cav14.ToString());
+                                                    int fo = Array.IndexOf(opcoes9, cav15.ToString());
 
-                                                if (selectedIndex9 == fa)
-                                                {
-                                                    if (equipa1.Team.Contains(fun2) || equipa1.Team.Contains(fun4))
+                                                    if (selectedIndex9 == fa)
                                                     {
-                                                        Console.Clear();
-                                                        Corrida.Resultado(cav1, p1);
-                                                        Console.ReadKey(true);
+                                                        if (equipa1.Team.Contains(fun2) || equipa1.Team.Contains(fun4))
+                                                        {
+                                                            Console.Clear();
+                                                            Corrida.Resultado(cav1, p1);
+                                                            Console.ReadKey(true);
+                                                        }
+                                                        else
+                                                        {
+                                                            Console.Clear();
+                                                            Console.WriteLine("Nao podes correr porque não tens um joquei!");
+                                                            Console.ReadKey(true);
+                                                        }
                                                     }
-                                                    else
+                                                    if (selectedIndex9 == fb)
                                                     {
-                                                        Console.Clear();
-                                                        Console.WriteLine("Nao podes correr porque não tens um joquei!");
-                                                        Console.ReadKey(true);
+                                                        if (equipa1.Team.Contains(fun2) || equipa1.Team.Contains(fun4))
+                                                        {
+                                                            Console.Clear();
+                                                            Corrida.Resultado(cav2, p1);
+                                                            Console.ReadKey(true);
+                                                        }
+                                                        else
+                                                        {
+                                                            Console.Clear();
+                                                            Console.WriteLine("Nao podes correr porque não tens um joquei!");
+                                                            Console.ReadKey(true);
+                                                        }
+                                                    }
+                                                    if (selectedIndex9 == fc)
+                                                    {
+                                                        if (equipa1.Team.Contains(fun2) || equipa1.Team.Contains(fun4))
+                                                        {
+                                                            Console.Clear();
+                                                            Corrida.Resultado(cav3, p1);
+                                                            Console.ReadKey(true);
+                                                        }
+                                                        else
+                                                        {
+                                                            Console.Clear();
+                                                            Console.WriteLine("Nao podes correr porque não tens um joquei!");
+                                                            Console.ReadKey(true);
+                                                        }
+                                                    }
+                                                    if (selectedIndex9 == fd)
+                                                    {
+                                                        if (equipa1.Team.Contains(fun2) || equipa1.Team.Contains(fun4))
+                                                        {
+                                                            Console.Clear();
+                                                            Corrida.Resultado(cav4, p1);
+                                                            Console.ReadKey(true);
+                                                        }
+                                                        else
+                                                        {
+                                                            Console.Clear();
+                                                            Console.WriteLine("Nao podes correr porque não tens um joquei!");
+                                                            Console.ReadKey(true);
+                                                        }
+                                                    }
+                                                    if (selectedIndex9 == fe)
+                                                    {
+                                                        if (equipa1.Team.Contains(fun2) || equipa1.Team.Contains(fun4))
+                                                        {
+                                                            Console.Clear();
+                                                            Corrida.Resultado(cav5, p1);
+                                                            Console.ReadKey(true);
+                                                        }
+                                                        else
+                                                        {
+                                                            Console.Clear();
+                                                            Console.WriteLine("Nao podes correr porque não tens um joquei!");
+                                                            Console.ReadKey(true);
+                                                        }
+                                                    }
+                                                    if (selectedIndex9 == ff)
+                                                    {
+                                                        if (equipa1.Team.Contains(fun2) || equipa1.Team.Contains(fun4))
+                                                        {
+                                                            Console.Clear();
+                                                            Corrida.Resultado(cav6, p1);
+                                                            Console.ReadKey(true);
+                                                        }
+                                                        else
+                                                        {
+                                                            Console.Clear();
+                                                            Console.WriteLine("Nao podes correr porque não tens um joquei!");
+                                                            Console.ReadKey(true);
+                                                        }
+                                                    }
+                                                    if (selectedIndex9 == fg)
+                                                    {
+                                                        if (equipa1.Team.Contains(fun2) || equipa1.Team.Contains(fun4))
+                                                        {
+                                                            Console.Clear();
+                                                            Corrida.Resultado(cav7, p1);
+                                                            Console.ReadKey(true);
+                                                        }
+                                                        else
+                                                        {
+                                                            Console.Clear();
+                                                            Console.WriteLine("Nao podes correr porque não tens um joquei!");
+                                                            Console.ReadKey(true);
+                                                        }
+                                                    }
+                                                    if (selectedIndex9 == fh)
+                                                    {
+                                                        if (equipa1.Team.Contains(fun2) || equipa1.Team.Contains(fun4))
+                                                        {
+                                                            Console.Clear();
+                                                            Corrida.Resultado(cav8, p1);
+                                                            Console.ReadKey(true);
+                                                        }
+                                                        else
+                                                        {
+                                                            Console.Clear();
+                                                            Console.WriteLine("Nao podes correr porque não tens um joquei!");
+                                                            Console.ReadKey(true);
+                                                        }
+                                                    }
+                                                    if (selectedIndex9 == fi)
+                                                    {
+                                                        if (equipa1.Team.Contains(fun2) || equipa1.Team.Contains(fun4))
+                                                        {
+                                                            Console.Clear();
+                                                            Corrida.Resultado(cav9, p1);
+                                                            Console.ReadKey(true);
+                                                        }
+                                                        else
+                                                        {
+                                                            Console.Clear();
+                                                            Console.WriteLine("Nao podes correr porque não tens um joquei!");
+                                                            Console.ReadKey(true);
+                                                        }
+                                                    }
+                                                    if (selectedIndex9 == fj)
+                                                    {
+                                                        if (equipa1.Team.Contains(fun2) || equipa1.Team.Contains(fun4))
+                                                        {
+                                                            Console.Clear();
+                                                            Corrida.Resultado(cav10, p1);
+                                                            Console.ReadKey(true);
+                                                        }
+                                                        else
+                                                        {
+                                                            Console.Clear();
+                                                            Console.WriteLine("Nao podes correr porque não tens um joquei!");
+                                                            Console.ReadKey(true);
+                                                        }
+                                                    }
+                                                    if (selectedIndex9 == fk)
+                                                    {
+                                                        if (equipa1.Team.Contains(fun2) || equipa1.Team.Contains(fun4))
+                                                        {
+                                                            Console.Clear();
+                                                            Corrida.Resultado(cav11, p1);
+                                                            Console.ReadKey(true);
+                                                        }
+                                                        else
+                                                        {
+                                                            Console.Clear();
+                                                            Console.WriteLine("Nao podes correr porque não tens um joquei!");
+                                                            Console.ReadKey(true);
+                                                        }
+                                                    }
+                                                    if (selectedIndex9 == fl)
+                                                    {
+                                                        if (equipa1.Team.Contains(fun2) || equipa1.Team.Contains(fun4))
+                                                        {
+                                                            Console.Clear();
+                                                            Corrida.Resultado(cav12, p1);
+                                                            Console.ReadKey(true);
+                                                        }
+                                                        else
+                                                        {
+                                                            Console.Clear();
+                                                            Console.WriteLine("Nao podes correr porque não tens um joquei!");
+                                                            Console.ReadKey(true);
+                                                        }
+                                                    }
+                                                    if (selectedIndex9 == fm)
+                                                    {
+                                                        if (equipa1.Team.Contains(fun2) || equipa1.Team.Contains(fun4))
+                                                        {
+                                                            Console.Clear();
+                                                            Corrida.Resultado(cav13, p1);
+                                                            Console.ReadKey(true);
+                                                        }
+                                                        else
+                                                        {
+                                                            Console.Clear();
+                                                            Console.WriteLine("Nao podes correr porque não tens um joquei!");
+                                                            Console.ReadKey(true);
+                                                        }
+                                                    }
+                                                    if (selectedIndex9 == fn)
+                                                    {
+                                                        if (equipa1.Team.Contains(fun2) || equipa1.Team.Contains(fun4))
+                                                        {
+                                                            Console.Clear();
+                                                            Corrida.Resultado(cav14, p1);
+                                                            Console.ReadKey(true);
+                                                        }
+                                                        else
+                                                        {
+                                                            Console.Clear();
+                                                            Console.WriteLine("Nao podes correr porque não tens um joquei!");
+                                                            Console.ReadKey(true);
+                                                        }
+                                                    }
+                                                    if (selectedIndex9 == fo)
+                                                    {
+                                                        if (equipa1.Team.Contains(fun2) || equipa1.Team.Contains(fun4))
+                                                        {
+                                                            Console.Clear();
+                                                            Corrida.Resultado(cav15, p1);
+                                                            Console.ReadKey(true);
+                                                        }
+                                                        else
+                                                        {
+                                                            Console.Clear();
+                                                            Console.WriteLine("Nao podes correr porque não tens um joquei!");
+                                                            Console.ReadKey(true);
+                                                        }
                                                     }
                                                 }
-                                                if (selectedIndex9 == fb)
+                                                else
                                                 {
-                                                    if (equipa1.Team.Contains(fun2) || equipa1.Team.Contains(fun4))
-                                                    {
-                                                        Console.Clear();
-                                                        Corrida.Resultado(cav2, p1);
-                                                        Console.ReadKey(true);
-                                                    }
-                                                    else
-                                                    {
-                                                        Console.Clear();
-                                                        Console.WriteLine("Nao podes correr porque não tens um joquei!");
-                                                        Console.ReadKey(true);
-                                                    }
-                                                }
-                                                if (selectedIndex9 == fc)
-                                                {
-                                                    if (equipa1.Team.Contains(fun2) || equipa1.Team.Contains(fun4))
-                                                    {
-                                                        Console.Clear();
-                                                        Corrida.Resultado(cav3, p1);
-                                                        Console.ReadKey(true);
-                                                    }
-                                                    else
-                                                    {
-                                                        Console.Clear();
-                                                        Console.WriteLine("Nao podes correr porque não tens um joquei!");
-                                                        Console.ReadKey(true);
-                                                    }
-                                                }
-                                                if (selectedIndex9 == fd)
-                                                {
-                                                    if (equipa1.Team.Contains(fun2) || equipa1.Team.Contains(fun4))
-                                                    {
-                                                        Console.Clear();
-                                                        Corrida.Resultado(cav4, p1);
-                                                        Console.ReadKey(true);
-                                                    }
-                                                    else
-                                                    {
-                                                        Console.Clear();
-                                                        Console.WriteLine("Nao podes correr porque não tens um joquei!");
-                                                        Console.ReadKey(true);
-                                                    }
-                                                }
-                                                if (selectedIndex9 == fe)
-                                                {
-                                                    if (equipa1.Team.Contains(fun2) || equipa1.Team.Contains(fun4))
-                                                    {
-                                                        Console.Clear();
-                                                        Corrida.Resultado(cav5, p1);
-                                                        Console.ReadKey(true);
-                                                    }
-                                                    else
-                                                    {
-                                                        Console.Clear();
-                                                        Console.WriteLine("Nao podes correr porque não tens um joquei!");
-                                                        Console.ReadKey(true);
-                                                    }
-                                                }
-                                                if (selectedIndex9 == ff)
-                                                {
-                                                    if (equipa1.Team.Contains(fun2) || equipa1.Team.Contains(fun4))
-                                                    {
-                                                        Console.Clear();
-                                                        Corrida.Resultado(cav6, p1);
-                                                        Console.ReadKey(true);
-                                                    }
-                                                    else
-                                                    {
-                                                        Console.Clear();
-                                                        Console.WriteLine("Nao podes correr porque não tens um joquei!");
-                                                        Console.ReadKey(true);
-                                                    }
-                                                }
-                                                if (selectedIndex9 == fg)
-                                                {
-                                                    if (equipa1.Team.Contains(fun2) || equipa1.Team.Contains(fun4))
-                                                    {
-                                                        Console.Clear();
-                                                        Corrida.Resultado(cav7, p1);
-                                                        Console.ReadKey(true);
-                                                    }
-                                                    else
-                                                    {
-                                                        Console.Clear();
-                                                        Console.WriteLine("Nao podes correr porque não tens um joquei!");
-                                                        Console.ReadKey(true);
-                                                    }
-                                                }
-                                                if (selectedIndex9 == fh)
-                                                {
-                                                    if (equipa1.Team.Contains(fun2) || equipa1.Team.Contains(fun4))
-                                                    {
-                                                        Console.Clear();
-                                                        Corrida.Resultado(cav8, p1);
-                                                        Console.ReadKey(true);
-                                                    }
-                                                    else
-                                                    {
-                                                        Console.Clear();
-                                                        Console.WriteLine("Nao podes correr porque não tens um joquei!");
-                                                        Console.ReadKey(true);
-                                                    }
-                                                }
-                                                if (selectedIndex9 == fi)
-                                                {
-                                                    if (equipa1.Team.Contains(fun2) || equipa1.Team.Contains(fun4))
-                                                    {
-                                                        Console.Clear();
-                                                        Corrida.Resultado(cav9, p1);
-                                                        Console.ReadKey(true);
-                                                    }
-                                                    else
-                                                    {
-                                                        Console.Clear();
-                                                        Console.WriteLine("Nao podes correr porque não tens um joquei!");
-                                                        Console.ReadKey(true);
-                                                    }
-                                                }
-                                                if (selectedIndex9 == fj)
-                                                {
-                                                    if (equipa1.Team.Contains(fun2) || equipa1.Team.Contains(fun4))
-                                                    {
-                                                        Console.Clear();
-                                                        Corrida.Resultado(cav10, p1);
-                                                        Console.ReadKey(true);
-                                                    }
-                                                    else
-                                                    {
-                                                        Console.Clear();
-                                                        Console.WriteLine("Nao podes correr porque não tens um joquei!");
-                                                        Console.ReadKey(true);
-                                                    }
-                                                }
-                                                if (selectedIndex9 == fk)
-                                                {
-                                                    if (equipa1.Team.Contains(fun2) || equipa1.Team.Contains(fun4))
-                                                    {
-                                                        Console.Clear();
-                                                        Corrida.Resultado(cav11, p1);
-                                                        Console.ReadKey(true);
-                                                    }
-                                                    else
-                                                    {
-                                                        Console.Clear();
-                                                        Console.WriteLine("Nao podes correr porque não tens um joquei!");
-                                                        Console.ReadKey(true);
-                                                    }
-                                                }
-                                                if (selectedIndex9 == fl)
-                                                {
-                                                    if (equipa1.Team.Contains(fun2) || equipa1.Team.Contains(fun4))
-                                                    {
-                                                        Console.Clear();
-                                                        Corrida.Resultado(cav12, p1);
-                                                        Console.ReadKey(true);
-                                                    }
-                                                    else
-                                                    {
-                                                        Console.Clear();
-                                                        Console.WriteLine("Nao podes correr porque não tens um joquei!");
-                                                        Console.ReadKey(true);
-                                                    }
-                                                }
-                                                if (selectedIndex9 == fm)
-                                                {
-                                                    if (equipa1.Team.Contains(fun2) || equipa1.Team.Contains(fun4))
-                                                    {
-                                                        Console.Clear();
-                                                        Corrida.Resultado(cav13, p1);
-                                                        Console.ReadKey(true);
-                                                    }
-                                                    else
-                                                    {
-                                                        Console.Clear();
-                                                        Console.WriteLine("Nao podes correr porque não tens um joquei!");
-                                                        Console.ReadKey(true);
-                                                    }
-                                                }
-                                                if (selectedIndex9 == fn)
-                                                {
-                                                    if (equipa1.Team.Contains(fun2) || equipa1.Team.Contains(fun4))
-                                                    {
-                                                        Console.Clear();
-                                                        Corrida.Resultado(cav14, p1);
-                                                        Console.ReadKey(true);
-                                                    }
-                                                    else
-                                                    {
-                                                        Console.Clear();
-                                                        Console.WriteLine("Nao podes correr porque não tens um joquei!");
-                                                        Console.ReadKey(true);
-                                                    }
-                                                }
-                                                if (selectedIndex9 == fo)
-                                                {
-                                                    if (equipa1.Team.Contains(fun2) || equipa1.Team.Contains(fun4))
-                                                    {
-                                                        Console.Clear();
-                                                        Corrida.Resultado(cav15, p1);
-                                                        Console.ReadKey(true);
-                                                    }
-                                                    else
-                                                    {
-                                                        Console.Clear();
-                                                        Console.WriteLine("Nao podes correr porque não tens um joquei!");
-                                                        Console.ReadKey(true);
-                                                    }
+                                                    Console.Clear();
+                                                    Console.WriteLine("Não é dia de corrida!");
+                                                    Console.ReadKey(true);
                                                 }
                                                 break;
                                         }
-                                    } while (selectedIndex6 != 5);
+                                    } while (selectedIndex6 != 6);
 
 
 
