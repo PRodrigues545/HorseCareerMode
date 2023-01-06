@@ -14,7 +14,7 @@ namespace HorseCareerMode
         public Cavalo(string nome, int velocidade, int resistencia, int forca, string cor, int popularidade):base(nome, velocidade, resistencia, forca, cor)
         {
             this.popularidade = popularidade;
-            this.preco = 1000 + this.Velocidade * 5 + this.Resistencia * 3 + this.Forca * 2 + this.Popularidade * 3;
+            this.preco = 1000 + this.Velocidade * 13 + this.Resistencia *12  + this.Forca * 11 + this.Popularidade * 15;
         }
 
 
@@ -77,9 +77,6 @@ namespace HorseCareerMode
         {
             return "O cavalo " + this.Nome + " tem " + this.Velocidade + " de velocidade, " + this.Resistencia + " de resistência e " + this.Forca + " de força";
         }
-
-
-
 
         public int Preco { get => preco; set => preco = value; }
         public int Popularidade { get => popularidade; set => popularidade = value; }
