@@ -53,6 +53,7 @@ namespace HorseCareerMode
                 Console.WriteLine("Perdeste");
                 C.Popularidade -= 10;
             }
+            C.Resistencia -= 10;
         }
     }
 }

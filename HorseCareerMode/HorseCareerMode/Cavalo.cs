@@ -38,14 +38,17 @@ namespace HorseCareerMode
                 this.Forca = 100;
             }
             Console.WriteLine(@"
-            .''
-  ._.-.___.' (`\
- //(        ( `'
-'/ )\ ).__. ) 
-' <' `\ ._/'\
-   `   \     \
+ ~,  O
+ /)\~_/\
+'  \ \~_\__ ~
+  _|_)_\_( )~~~
+//   /|   \|\
+  ()//|     \`
+  ||/||
+  ||
+  || 
 ");
-            Console.WriteLine("O Cavalo "+ this.Nome +" aumentou 5 de velocidade");
+            Console.WriteLine("O Cavalo "+ this.Nome + " aumentou 5 de velocidade");
             Console.WriteLine("O Cavalo "+ this.Nome + " aumentou 2 de resistencia");
             Console.WriteLine("O Cavalo "+ this.Nome + " aumentou 4 de força");
             Console.WriteLine();
@@ -72,10 +75,51 @@ namespace HorseCareerMode
             Console.WriteLine("O Cavalo " + this.Nome + " tem " + this.Popularidade + " de popularidade");
         }
 
+        public void Limpeza()
+        {
+            this.Resistencia += 9;
+            if(this.Resistencia > 100)
+            {
+                this.Resistencia = 100;
+            }
+
+            Console.WriteLine(@"
+       _ ____
+     /( ) _   \
+    / //   /\` \,  ||--||--||-
+      \|   |/  \|  ||--||--||-
+~^~^~^~~^~~~^~~^^~^^^^^^^^^^^^");
+            Console.WriteLine("O Cavalo " + this.Nome + " aumentou 9 de resistencia");
+        }
+
+
+        public void Visita() 
+        {
+            this.Popularidade += 5;
+            if(this.Popularidade > 100)
+            {
+                this.Popularidade = 100;
+            }
+            this.Resistencia += 2;
+            if(this.Resistencia > 100)
+            {
+                this.Resistencia = 100;
+            }
+            Console.WriteLine(@"
+            .''
+  ._.-.___.' (`\
+ //(        ( `'
+'/ )\ ).__. ) 
+' <' `\ ._/'\
+   `   \     \
+");
+            Console.WriteLine("O Cavalo " + this.Nome + " aumentou 5 de popularidade");
+            Console.WriteLine("O Cavalo " + this.Nome + " aumentou 2 de resistencia");
+        }
 
         public override string ToString()
         {
-            return "O cavalo " + this.Nome + " tem " + this.Velocidade + " de velocidade, " + this.Resistencia + " de resistência e " + this.Forca + " de força";
+            return "O cavalo " + this.Nome + " tem " + this.Velocidade + " de velocidade, " + this.Resistencia + " de resistência, " + this.Forca + " de força e " + this.Popularidade + " de popularidade" ;
         }
 
         public int Preco { get => preco; set => preco = value; }
