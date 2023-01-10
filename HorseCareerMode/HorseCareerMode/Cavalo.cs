@@ -14,7 +14,7 @@ namespace HorseCareerMode
         public Cavalo(string nome, int velocidade, int resistencia, int forca, string cor, int popularidade):base(nome, velocidade, resistencia, forca, cor)
         {
             this.popularidade = popularidade;
-            this.preco = 1000 + this.Velocidade * 13 + this.Resistencia *12  + this.Forca * 11 + this.Popularidade * 15;
+            this.preco = 1000 + this.Velocidade * 13 + this.Resistencia * 12  + this.Forca * 11 + this.Popularidade * 15;
         }
 
 
@@ -22,7 +22,7 @@ namespace HorseCareerMode
         public void Treino()
         {
 
-            this.Velocidade += 5;
+            this.Velocidade += 3;
             if(this.Velocidade > 100)
             {
                 this.Velocidade = 100;

@@ -2220,7 +2220,7 @@ Escolha o cavalo para competir!
                                                 string[] opcoes5 = new string[est1.Tropa.Count + 1];
                                                 foreach (Cavalo c in est1.Tropa)
                                                 {
-                                                    opcoes5[i] = c.ToString() +" , esta a valer " + (c.Preco - 100);
+                                                    opcoes5[i] = c.ToString() +", esta a valer " + (c.Preco - 100);
                                                     i++;
                                                 }
                                                 opcoes5[i] = "Voltar";
@@ -2229,21 +2229,21 @@ Escolha o cavalo para competir!
 
                                                 selectedIndex5 = menuMercadoVenderCavalos.Run();
 
-                                                int ca = Array.IndexOf(opcoes5, cav1.ToString()+ " , esta a valer " + (cav1.Preco - 100));
-                                                int cb = Array.IndexOf(opcoes5, cav2.ToString()+ " , esta a valer " + (cav2.Preco - 100));
-                                                int cc = Array.IndexOf(opcoes5, cav3.ToString()+ " , esta a valer " + (cav3.Preco - 100));
-                                                int cd = Array.IndexOf(opcoes5, cav4.ToString() + " , esta a valer " + (cav4.Preco - 100));
-                                                int ce = Array.IndexOf(opcoes5, cav5.ToString() + " , esta a valer " + (cav5.Preco - 100));
-                                                int cf = Array.IndexOf(opcoes5, cav6.ToString() + " , esta a valer " + (cav6.Preco - 100));
-                                                int cg = Array.IndexOf(opcoes5, cav7.ToString() + " , esta a valer " + (cav7.Preco - 100));
-                                                int ch = Array.IndexOf(opcoes5, cav8.ToString() + " , esta a valer " + (cav8.Preco - 100));
-                                                int ci = Array.IndexOf(opcoes5, cav9.ToString() + " , esta a valer " + (cav9.Preco - 100));
-                                                int cj = Array.IndexOf(opcoes5, cav10.ToString() + " , esta a valer " + (cav10.Preco - 100));
-                                                int ck = Array.IndexOf(opcoes5, cav11.ToString() + " , esta a valer " + (cav11.Preco - 100));
-                                                int cl = Array.IndexOf(opcoes5, cav12.ToString() + " , esta a valer " + (cav12.Preco - 100));
-                                                int cm = Array.IndexOf(opcoes5, cav13.ToString() + " , esta a valer " + (cav13.Preco - 100));
-                                                int cn = Array.IndexOf(opcoes5, cav14.ToString() + " , esta a valer " + (cav14.Preco - 100));
-                                                int co = Array.IndexOf(opcoes5, cav15.ToString() + " , esta a valer " + (cav15.Preco - 100));
+                                                int ca = Array.IndexOf(opcoes5, cav1.ToString()+ ", esta a valer " + (cav1.Preco - 100));
+                                                int cb = Array.IndexOf(opcoes5, cav2.ToString()+ ", esta a valer " + (cav2.Preco - 100));
+                                                int cc = Array.IndexOf(opcoes5, cav3.ToString()+ ", esta a valer " + (cav3.Preco - 100));
+                                                int cd = Array.IndexOf(opcoes5, cav4.ToString() + ", esta a valer " + (cav4.Preco - 100));
+                                                int ce = Array.IndexOf(opcoes5, cav5.ToString() + ", esta a valer " + (cav5.Preco - 100));
+                                                int cf = Array.IndexOf(opcoes5, cav6.ToString() + ", esta a valer " + (cav6.Preco - 100));
+                                                int cg = Array.IndexOf(opcoes5, cav7.ToString() + ", esta a valer " + (cav7.Preco - 100));
+                                                int ch = Array.IndexOf(opcoes5, cav8.ToString() + ", esta a valer " + (cav8.Preco - 100));
+                                                int ci = Array.IndexOf(opcoes5, cav9.ToString() + ", esta a valer " + (cav9.Preco - 100));
+                                                int cj = Array.IndexOf(opcoes5, cav10.ToString() + ", esta a valer " + (cav10.Preco - 100));
+                                                int ck = Array.IndexOf(opcoes5, cav11.ToString() + ", esta a valer " + (cav11.Preco - 100));
+                                                int cl = Array.IndexOf(opcoes5, cav12.ToString() + ", esta a valer " + (cav12.Preco - 100));
+                                                int cm = Array.IndexOf(opcoes5, cav13.ToString() + ", esta a valer " + (cav13.Preco - 100));
+                                                int cn = Array.IndexOf(opcoes5, cav14.ToString() + ", esta a valer " + (cav14.Preco - 100));
+                                                int co = Array.IndexOf(opcoes5, cav15.ToString() + ", esta a valer " + (cav15.Preco - 100));
 
                                                 if (selectedIndex5 == ca)
                                                 {

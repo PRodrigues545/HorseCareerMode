@@ -7,14 +7,21 @@ using static System.Console;
 
 namespace HorseCareerMode
 {
-    public class Corrida
+    public static class Corrida
     {
  
         static private double Correr(Cavalo c)
         {
             Random rd = new Random();
             double pace;
-            pace = c.Velocidade * 0.8 + c.Resistencia * 0.7 + c.Forca * 0.5 + rd.Next(0, 51) * 0.5;
+            int sorte = rd.Next(0, 51);
+            pace = c.Velocidade * 0.8 + c.Resistencia * 0.7 + c.Forca * 0.5 + sorte * 0.5;
+
+            if(sorte < 5)
+            {
+                c.Resistencia = 0;
+                Console.WriteLine("O teu cavalo lesionou-se, a resistencia ficou a 0");
+            }
 
             return pace;
         }
@@ -23,7 +30,7 @@ namespace HorseCareerMode
         {
             Random rd = new Random();
             double pace = Correr(C);
-            if (pace >= rd.Next(150, 200))
+            if (pace >= rd.Next(135, 236))
             {
                 Console.WriteLine(@"
   _______
@@ -54,6 +61,10 @@ namespace HorseCareerMode
                 C.Popularidade -= 10;
             }
             C.Resistencia -= 10;
+            if(C.Resistencia > 0)
+            {
+                C.Resistencia = 0;
+            }
         }
     }
 }

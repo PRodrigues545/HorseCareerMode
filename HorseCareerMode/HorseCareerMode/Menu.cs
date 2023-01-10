@@ -33,7 +33,7 @@ namespace HorseCareerMode
                 {
                     prefixo = "*";
                     Console.ForegroundColor = ConsoleColor.Black;
-                    Console.BackgroundColor = ConsoleColor.Blue;
+                    Console.BackgroundColor = ConsoleColor.White;
 
                 }
                 else
