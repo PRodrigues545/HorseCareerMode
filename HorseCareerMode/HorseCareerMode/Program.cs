@@ -64,14 +64,8 @@ namespace HorseCareerMode
             cde.Empregados.Add(fun2);
             cde.Empregados.Add(fun3);
             cde.Empregados.Add(fun4);
-            cde.Empregados.Add(fun8);
-            cde.Empregados.Add(fun6);
-            cde.Empregados.Add(fun7);
-            cde.Empregados.Add(fun8);
             cde.Empregados.Add(fun9);
             cde.Empregados.Add(fun10);
-            cde.Empregados.Add(fun11);
-            cde.Empregados.Add(fun12);
             cde.Empregados.Add(fun13);
             cde.Empregados.Add(fun14);
 
