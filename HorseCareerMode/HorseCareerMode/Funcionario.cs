@@ -9,11 +9,11 @@ namespace HorseCareerMode
 public enum Profissao
     {
         Joquei = 1,
-        Veterinario,
         Treinador,
-        MembroDoEstabulo,
+        Veterinario,
         Ferrador,
         TratadorDeCampo,
+        MembroDoEstabulo,
         RelacoesPublicas
     }
     public class Funcionario
@@ -33,7 +33,8 @@ public enum Profissao
 
         public override string ToString()
         {
-            return ""+ nome + " ,de "+idade+" anos, " +" é " + profissao +". Valor de mercado de " + this.preco + " euros";
+            return ""+ nome + " ,de "+idade+" anos, " +" é " + profissao +"." +
+                " Valor de mercado de " + this.preco + " euros";
         }
 
 

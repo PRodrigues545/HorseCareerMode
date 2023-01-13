@@ -61,7 +61,7 @@ namespace HorseCareerMode
                 C.Popularidade -= 10;
             }
             C.Resistencia -= 10;
-            if(C.Resistencia > 0)
+            if(C.Resistencia < 0)
             {
                 C.Resistencia = 0;
             }

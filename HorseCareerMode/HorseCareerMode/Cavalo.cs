@@ -119,7 +119,8 @@ namespace HorseCareerMode
 
         public override string ToString()
         {
-            return "O cavalo " + this.Nome + " tem " + this.Velocidade + " de velocidade, " + this.Resistencia + " de resistência, " + this.Forca + " de força e " + this.Popularidade + " de popularidade" ;
+            return "O cavalo " + this.Nome + " tem " + this.Velocidade + " de velocidade, " + this.Resistencia +
+                " de resistência, " + this.Forca + " de força e " + this.Popularidade + " de popularidade" ;
         }
 
         public int Preco { get => preco; set => preco = value; }

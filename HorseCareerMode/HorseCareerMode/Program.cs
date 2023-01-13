@@ -64,12 +64,18 @@ namespace HorseCareerMode
             cde.Empregados.Add(fun2);
             cde.Empregados.Add(fun3);
             cde.Empregados.Add(fun4);
+            cde.Empregados.Add(fun5);
+            cde.Empregados.Add(fun6);
+            cde.Empregados.Add(fun7);
+            cde.Empregados.Add(fun8);
             cde.Empregados.Add(fun9);
             cde.Empregados.Add(fun10);
+            cde.Empregados.Add(fun11);
+            cde.Empregados.Add(fun12);
             cde.Empregados.Add(fun13);
             cde.Empregados.Add(fun14);
 
-            Perfil p1= new Perfil("Player", 5000);
+            Perfil p1= new Perfil("Player", 4000);
           
             int selectedIndex = 0;
             int selectedIndex1 = 0;
@@ -87,6 +93,10 @@ namespace HorseCareerMode
 
             do
             {
+
+                //Menu principal
+
+
                 string prompt = @"
 
 _  _  ___  ___ ___ ___    ___   _   ___ ___ ___ ___   __  __  ___  ___  ___ 
@@ -154,6 +164,11 @@ Welcome to Horse Career Mode";
                                                 
                                                     do
                                                     {
+
+                                                    //Menu para a 
+                                                    //realização do treino
+
+
                                                         if (calendario.Dia != 7)
                                                         {
                                                             Console.Clear();
@@ -166,6 +181,10 @@ Welcome to Horse Career Mode";
      ^    ^                                                     
     ";
 
+
+                                                        //Menu dinamico
+
+
                                                             int i3 = 0;
                                                             string[] opcoes7 = new string[est1.Tropa.Count + 1];
                                                             foreach (Cavalo c in est1.Tropa)
@@ -177,6 +196,10 @@ Welcome to Horse Career Mode";
 
                                                             Menu menuTreinoCavalos = new Menu(prompt7, opcoes7);
                                                             selectedIndex7 = menuTreinoCavalos.Run();
+
+
+                                                        //Obtençao dos index de cada cavalo
+
 
                                                             int da = Array.IndexOf(opcoes7, cav1.ToString());
                                                             int db = Array.IndexOf(opcoes7, cav2.ToString());
@@ -193,6 +216,10 @@ Welcome to Horse Career Mode";
                                                             int dm = Array.IndexOf(opcoes7, cav13.ToString());
                                                             int dn = Array.IndexOf(opcoes7, cav14.ToString());
                                                             int dp = Array.IndexOf(opcoes7, cav15.ToString());
+
+
+                                                        //Metodo de treino
+
 
                                                             if (selectedIndex7 == da)
                                                             {
@@ -437,7 +464,11 @@ Welcome to Horse Career Mode";
                                                             }
                                                         }
                                                         else
-                                                        {  
+                                                        {
+                                                            //Proibição de treinar
+                                                            //por se tratar do dia de corrida
+
+
                                                             Console.Clear();
                                                             Console.WriteLine("É DIA DE CORRIDA!!");
                                                             Console.ReadKey(true);
@@ -450,6 +481,12 @@ Welcome to Horse Career Mode";
                                             case 1:
                                                     do
                                                     {
+
+                                                    //Menu para 
+                                                    //sessao fotografica
+
+
+
                                                         if (calendario.Dia != 7) {
                                                             Console.Clear();
                                                             string prompt8 = @"
@@ -461,6 +498,8 @@ Welcome to Horse Career Mode";
      ^    ^                                                     
 ";
 
+
+                                                        //Menu dinamico
                                                             int i4 = 0;
                                                             string[] opcoes8 = new string[est1.Tropa.Count + 1];
                                                             foreach (Cavalo c in est1.Tropa)
@@ -472,6 +511,11 @@ Welcome to Horse Career Mode";
 
                                                             Menu menuFotoCavalos = new Menu(prompt8, opcoes8);
                                                             selectedIndex8 = menuFotoCavalos.Run();
+
+
+
+                                                        //obtençao index de cada cavalo
+
 
                                                             int ea = Array.IndexOf(opcoes8, cav1.ToString());
                                                             int eb = Array.IndexOf(opcoes8, cav2.ToString());
@@ -489,6 +533,8 @@ Welcome to Horse Career Mode";
                                                             int en = Array.IndexOf(opcoes8, cav14.ToString());
                                                             int eo = Array.IndexOf(opcoes8, cav15.ToString());
 
+
+                                                        //Metodo sessao fotografica
                                                         
                                                             if (selectedIndex8 == ea)
                                                             {
@@ -740,14 +786,24 @@ Welcome to Horse Career Mode";
                                                         }
                                                 } while (selectedIndex8 != est1.Tropa.Count);
                                                 break;
+
+
+
+                                                //Mostrar dia da semana
+
                                             case 2:
                                                 Console.Clear();
                                                 calendario.MostrarDia();
                                                 Console.ReadKey(true);
                                                 break;
+
+
                                             case 3:
                                                     do
                                                     {
+
+                                                    //Menu Limpeza do Estabulo/Cavalo
+
                                                         if (calendario.Dia != 7)
                                                         {
                                                             string prompt10 = @"
@@ -788,6 +844,10 @@ Welcome to Horse Career Mode";
                                                             int gm = Array.IndexOf(opcoes10, cav13.ToString());
                                                             int gn = Array.IndexOf(opcoes10, cav14.ToString());
                                                             int go = Array.IndexOf(opcoes10, cav15.ToString());
+
+
+                                                        //Metodo limpar cavalo
+
 
                                                             if (selectedIndex10 == ga)
                                                             {
@@ -1042,6 +1102,10 @@ Welcome to Horse Career Mode";
                                             case 4:
                                                 do
                                                 {
+
+                                                    //Menu visitas (aberto ao publico)
+
+
                                                     if (calendario.Dia != 7)
                                                     {
 
@@ -1079,6 +1143,9 @@ Welcome to Horse Career Mode";
                                                         int hm = Array.IndexOf(opcoes11, cav13.ToString());
                                                         int hn = Array.IndexOf(opcoes11, cav14.ToString());
                                                         int ho = Array.IndexOf(opcoes11, cav15.ToString());
+
+
+                                                        //Metodo visita
 
                                                         if (selectedIndex11 == ha)
                                                         {
@@ -1346,7 +1413,11 @@ Welcome to Horse Career Mode";
                                                 } while (selectedIndex11 != est1.Tropa.Count);
                                                 break;
                                             case 5:
-                                                if (calendario.Dia == 7)
+
+                                                //CORRIDA
+
+
+                                                if (calendario.Dia == 7) //Só é possivel no dia 7 (Domingo)
                                                 {
                                                     string prompt9 = @"
  -------------------+--+--+--+--+--
@@ -1393,6 +1464,9 @@ Escolha o cavalo para competir!
                                                     int fm = Array.IndexOf(opcoes9, cav13.ToString());
                                                     int fn = Array.IndexOf(opcoes9, cav14.ToString());
                                                     int fo = Array.IndexOf(opcoes9, cav15.ToString());
+
+
+                                                    //Metodo Corrida
 
                                                     if (selectedIndex9 == fa)
                                                     {
@@ -1649,6 +1723,9 @@ Escolha o cavalo para competir!
 
                                     break;
                                 case 2:
+                                    //Informações sobre os funcionarios contratados
+                                    //e que pertencem á equipa
+                                    
                                     Console.Clear();
                                     equipa1.InfoEquipa();
                                     Console.ReadKey(true);
@@ -1656,6 +1733,8 @@ Escolha o cavalo para competir!
                                 case 3:
                                     do
                                     {
+                                        //Menu mercado
+
                                         string prompt2 = @"
 
   __  __ ______ _____   _____          _____   ____  
@@ -1678,6 +1757,8 @@ Escolha o cavalo para competir!
                                             case 0:
                                                 do
                                                 {
+                                                    //Mercado para os Funcionarios
+
                                                     string prompt4 = @"
     &&&
    (+.+)
@@ -1716,6 +1797,9 @@ Escolha o cavalo para competir!
                                                     int bl = Array.IndexOf(opcoes4, fun12.ToString());
                                                     int bm = Array.IndexOf(opcoes4, fun13.ToString());
                                                     int bn = Array.IndexOf(opcoes4, fun14.ToString());
+
+
+                                                    //Troca entre listas (funcionaro vai da Lista <cde> para a Lista <equipa>
 
                                                     if (selectedIndex4 == ba)
                                                     {
@@ -1934,6 +2018,10 @@ Escolha o cavalo para competir!
                                             case 1:
                                                 do
                                                 {
+
+                                                    //Mercado de Cavalos
+
+
                                                     string prompt3 = @"
            ,--,
      _ ___/ /\|
@@ -1971,6 +2059,12 @@ Escolha o cavalo para competir!
                                                     int am = Array.IndexOf(opcoes3, cav13.Nome + ", tem " + cav13.Popularidade + " de popularidade" + " e custa " + cav13.Preco);
                                                     int an = Array.IndexOf(opcoes3, cav14.Nome + ", tem " + cav14.Popularidade + " de popularidade" + " e custa " + cav14.Preco);
                                                     int ao = Array.IndexOf(opcoes3, cav15.Nome + ", tem " + cav15.Popularidade + " de popularidade" + " e custa " + cav15.Preco);
+
+
+
+                                                    //Troca entre listas (cavalo vai da Lista <mercado> para a Lista <estabulo>
+
+
 
                                                     if (selectedIndex3 == aa)
                                                     {
@@ -2200,6 +2294,11 @@ Escolha o cavalo para competir!
                                                 } while (selectedIndex3 != mercado.CavalosVenda.Count);
                                                 break;
                                             case 2:
+
+                                                //Menu Vender Cavalo
+                                                //(Volta para a lista mercado)
+
+
                                                 Console.Clear();
                                                 string prompt5 = @"
            ,--,
@@ -2239,6 +2338,10 @@ Escolha o cavalo para competir!
                                                 int cn = Array.IndexOf(opcoes5, cav14.ToString() + ", esta a valer " + (cav14.Preco - 100));
                                                 int co = Array.IndexOf(opcoes5, cav15.ToString() + ", esta a valer " + (cav15.Preco - 100));
 
+
+                                                //Troca entre listas (cavalo vai da Lista <estabulo> para a Lista <mercado>
+
+
                                                 if (selectedIndex5 == ca)
                                                 {
                                                     est1.Tropa.Remove(cav1);
@@ -2248,7 +2351,8 @@ Escolha o cavalo para competir!
                                                 if (selectedIndex5 == cb)
                                                 {
                                                   est1.Tropa.Remove(cav2);
-                                                   p1.Dinheiro += cav2.Preco - 100;
+                                                  mercado.CavalosVenda.Add(cav2);
+                                                  p1.Dinheiro += cav2.Preco - 100;
                                                 }
                                                 if (selectedIndex5 == cc)
                                                 {
@@ -2333,6 +2437,11 @@ Escolha o cavalo para competir!
                                     }while (selectedIndex2 != 3);
                                     break;
                                 case 4:
+
+
+                                    //Informaçao do dinheiro do jogador
+
+
                                     Console.Clear();
                                     Console.WriteLine(@"
 ___________________________________
@@ -2353,6 +2462,9 @@ ___________________________________
                         } while (selectedIndex1 != 5);
                         break;
                     case 1:
+
+                        //Sobre (Menu Inicial)
+
                         Console.Clear();
                         Console.WriteLine("Jogo criado por:");
                         Console.WriteLine("");
