@@ -6,16 +6,17 @@ using System.Threading.Tasks;
 
 namespace HorseCareerMode
 {
-public enum Profissao
-    {
-        Joquei = 1,
-        Treinador,
-        Veterinario,
-        Ferrador,
-        TratadorDeCampo,
-        MembroDoEstabulo,
-        RelacoesPublicas
-    }
+    [Serializable]
+    public enum Profissao
+        {
+            Joquei = 1,
+            Treinador,
+            Veterinario,
+            Ferrador,
+            TratadorDeCampo,
+            MembroDoEstabulo,
+            RelacoesPublicas    
+        }
     public class Funcionario
     {
         private string nome;
@@ -33,7 +34,7 @@ public enum Profissao
 
         public override string ToString()
         {
-            return ""+ nome + " ,de "+idade+" anos, " +" é " + profissao +"." +
+            return ""+ this.nome + " ,de "+this.idade+" anos, " +" é " + this.profissao +"." +
                 " Valor de mercado de " + this.preco + " euros";
         }
 

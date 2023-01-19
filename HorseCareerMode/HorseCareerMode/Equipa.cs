@@ -6,13 +6,19 @@ using System.Threading.Tasks;
 
 namespace HorseCareerMode
 {
+    [Serializable]
     public class Equipa
     {
-        private List<Funcionario> team;
 
-        public Equipa()
+        private List<Funcionario> team;
+        private Perfil perfil;
+        private Calendario calendario;
+
+        public Equipa(Perfil perfil, Calendario calendario)
         {
             this.team = new List<Funcionario>();
+            this.Perfil = perfil;
+            this.Calendario = calendario;
         }
 
         public void InfoEquipa()
@@ -33,6 +39,8 @@ namespace HorseCareerMode
 
 
 
-public List<Funcionario> Team { get => team; set => team = value; }
+        public List<Funcionario> Team { get => team; set => team = value; }
+        public Perfil Perfil { get => perfil; set => perfil = value; }
+        public Calendario Calendario { get => calendario; set => calendario = value; }
     }
 }

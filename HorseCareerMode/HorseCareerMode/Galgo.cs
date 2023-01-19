@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace HorseCareerMode
 {
+    [Serializable]
     public class Galgo: Animal
     {
         public Galgo(string nome, int velocidade, int resistencia, int forca, string cor):base(nome, velocidade, resistencia, forca, cor)

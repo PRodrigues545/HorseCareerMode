@@ -9,6 +9,7 @@ using static System.Console;
 
 namespace HorseCareerMode
 {
+    [Serializable]
     public class Perfil
     {
         private string userName;
@@ -25,10 +26,6 @@ namespace HorseCareerMode
         {
             return "O jogador tem " + this.dinheiro + " euros";
         }
-
-
-
-
 
 
         public string UserName { get => userName; set => userName = value; }

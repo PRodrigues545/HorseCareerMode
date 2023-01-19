@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,6 +9,7 @@ using static System.Console;
 
 namespace HorseCareerMode
 {
+    [Serializable]
     public class Menu
     {
         private int SelectedIndex;

@@ -38,11 +38,13 @@ namespace HorseCareerMode
             Cavalo cav14 = new Cavalo("Genovevo", 80, 55, 65, "Cinza", 90);
             Cavalo cav15 = new Cavalo("Buenaventura", 70, 75,65, "Castanho", 80);
 
+
+            Perfil p1 = new Perfil("Player", 4000);
             Mercado mercado = new Mercado();
             Estabulo est1 = new Estabulo();
             CentroDeEmprego cde = new CentroDeEmprego();
-            Equipa equipa1 = new Equipa();
             Calendario calendario = new Calendario();
+            Equipa equipa1 = new Equipa(p1, calendario);
 
             mercado.CavalosVenda.Add(cav1);
             mercado.CavalosVenda.Add(cav2);
@@ -74,8 +76,6 @@ namespace HorseCareerMode
             cde.Empregados.Add(fun12);
             cde.Empregados.Add(fun13);
             cde.Empregados.Add(fun14);
-
-            Perfil p1= new Perfil("Player", 4000);
           
             int selectedIndex = 0;
             int selectedIndex1 = 0;
@@ -106,7 +106,7 @@ _  _  ___  ___ ___ ___    ___   _   ___ ___ ___ ___   __  __  ___  ___  ___
                                                                               
  
 Welcome to Horse Career Mode";
-                string[] options = { "Jogar", "Sobre", "Sair" };
+                string[] options = { "Jogar", "Novo Jogo","Carregar Jogo" ,"Sobre", "Sair" };
 
 
                 Menu mainMenu = new Menu(prompt, options);
@@ -126,7 +126,7 @@ Welcome to Horse Career Mode";
 /          \-----`    \  
 `.__________`-_______-'
 ";
-                            string[] opcoes1 = {"Cavalos", "Atividades", "Equipa", "Mercado", "Banco", "Voltar" };
+                            string[] opcoes1 = {"Cavalos", "Atividades", "Equipa", "Mercado", "Banco", "Guardar Jogo", "Voltar" };
 
                             Menu menu = new Menu(prompt1, opcoes1);
 
@@ -2458,10 +2458,32 @@ ___________________________________
                                     Console.WriteLine(p1.ToString());
                                     Console.ReadKey(true);
                                     break;
+
+                                case 5:
+                                   //Nao esta afuncionar
+
+                                    //Console.Clear();
+                                    //Gravador.GravarCentroDeEmprego(cde);
+                                    //Gravador.GravarEquipa(equipa1);
+                                    //Gravador.GravarEstabulo(est1);
+                                    //Gravador.GravarMercado(mercado);
+                                    //Console.WriteLine("Jogo Guardado");
+                                    //Console.ReadKey(true);
+                                    break;
                             }
-                        } while (selectedIndex1 != 5);
+                        } while (selectedIndex1 != 6);
                         break;
                     case 1:
+                        break;
+                    case 2:
+                        // Nao esta a funcionar
+
+                        //Gravador.LerCentro();
+                        //Gravador.LerEquipa();
+                        //Gravador.LerEstabulo();
+                        //Gravador.LerMercado();
+                        break;
+                    case 3:
 
                         //Sobre (Menu Inicial)
 
@@ -2474,13 +2496,13 @@ ___________________________________
                         Console.WriteLine("Pedro Rodrigues");
                         Console.ReadKey(true);
                         break;
-                    case 2:
+                    case 4:
                         Console.Write("\nPress any key to exit...");
                         Console.ReadKey(true);
                         Environment.Exit(0);
                         break;
                 }
-            } while (selectedIndex != 2);
+            } while (selectedIndex != 4);
         }
     }
 }

@@ -7,6 +7,7 @@ using static System.Console;
 
 namespace HorseCareerMode
 {
+    [Serializable]
     public static class Corrida
     {
  

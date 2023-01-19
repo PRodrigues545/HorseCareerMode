@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace HorseCareerMode
 {
+    [Serializable]
     public class Calendario
     {
         private int dia;

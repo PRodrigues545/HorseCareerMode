@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace HorseCareerMode
 {
+    [Serializable]
     public class Cavalo : Animal
     {
         private int popularidade;
